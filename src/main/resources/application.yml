@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    #application name, optional
+    name: BZ_Takeout
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/BZ_Takeout?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+mybatis-plus:
+  configuration:
+    #e.g. address_book => addressBook, mapping table name to object entity
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
