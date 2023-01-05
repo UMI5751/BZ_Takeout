@@ -6,6 +6,7 @@ import com.bowen.BZ_takeout.common.R;
 import com.bowen.BZ_takeout.entity.Employee;
 import com.bowen.BZ_takeout.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.authenticator.DigestAuthenticator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 
 @Slf4j
 @RestController
@@ -53,6 +55,27 @@ public class EmployeeController {
     public R<String> logout(HttpServletRequest request) {
         request.getSession().removeAttribute("employee");
         return R.success("Logout Successfully");
+    }
+
+    @PostMapping
+    public R<String> save(@RequestBody Employee employee, HttpServletRequest request) {
+        log.info("add new employee");
+
+        employee.setPassword(DigestUtils.md5DigestAsHex("12345".getBytes()));
+
+        employee.setCreateTime(LocalDateTime.now());
+        employee.setUpdateTime(LocalDateTime.now());
+
+        Long empId = (Long) request.getSession().getAttribute("employee");
+
+        employee.setCreateUser(empId);
+        employee.setUpdateUser(empId);
+
+        employeeService.save(employee);
+
+        return R.success("add employee successfully");
+
+
     }
 
 
