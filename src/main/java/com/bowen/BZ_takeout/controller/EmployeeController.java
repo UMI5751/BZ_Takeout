@@ -2,17 +2,16 @@ package com.bowen.BZ_takeout.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bowen.BZ_takeout.common.R;
 import com.bowen.BZ_takeout.entity.Employee;
 import com.bowen.BZ_takeout.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.authenticator.DigestAuthenticator;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
@@ -74,7 +73,20 @@ public class EmployeeController {
         employeeService.save(employee);
 
         return R.success("add employee successfully");
+    }
 
+    @GetMapping("/page")
+    public R<Page> page(int page, int pageSize, String name) {
+        Page pageInfo = new Page(page, pageSize);
+
+        LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
+
+        queryWrapper.orderByDesc(Employee::getUpdateTime);
+
+        employeeService.page(pageInfo, queryWrapper);
+
+        return R.success(pageInfo);
 
     }
 
