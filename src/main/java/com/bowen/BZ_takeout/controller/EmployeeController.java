@@ -90,5 +90,12 @@ public class EmployeeController {
 
     }
 
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id) {
+        log.info("Searching employee by ID");
+        Employee employee = employeeService.getById(id);
+        return R.success(employee);
+    }
+
 
 }

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d037b06e-82f6-4a5d-86e3-c4ecf419a190" name="Changes" comment="update employee adding">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/JacksonObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/config/MybatisPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="d037b06e-82f6-4a5d-86e3-c4ecf419a190" name="Changes" comment="update employee editing">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +94,7 @@
       <workItem from="1672640836348" duration="6349000" />
       <workItem from="1672659330533" duration="6270000" />
       <workItem from="1672877910074" duration="331000" />
-      <workItem from="1672878353659" duration="16612000" />
+      <workItem from="1672878353659" duration="20369000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1672640701349</created>
@@ -127,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672919100206</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update employee editing">
+      <created>1673085214500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673085214500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +152,8 @@
     <MESSAGE value="create project" />
     <MESSAGE value="update login part" />
     <MESSAGE value="update employee adding" />
-    <option name="LAST_COMMIT_MESSAGE" value="update employee adding" />
+    <MESSAGE value="update employee editing" />
+    <option name="LAST_COMMIT_MESSAGE" value="update employee editing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
