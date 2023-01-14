@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d037b06e-82f6-4a5d-86e3-c4ecf419a190" name="Changes" comment="update jacksonObjectMapper">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/BaseContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/service/impl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/styles/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/styles/page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/filter/LoginCheckFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/bowenzhang/IdeaProjects/BZ_Takeout/src/main/java/com/bowen/BZ_takeout/common",
+    "last_opened_file_path": "/Users/bowenzhang/IdeaProjects/BZ_Takeout/src/main/java/com/bowen/BZ_takeout/entity",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -59,8 +62,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common" />
       <recent name="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -100,7 +103,8 @@
       <workItem from="1672640836348" duration="6349000" />
       <workItem from="1672659330533" duration="6270000" />
       <workItem from="1672877910074" duration="331000" />
-      <workItem from="1672878353659" duration="24342000" />
+      <workItem from="1672878353659" duration="27482000" />
+      <workItem from="1673507248763" duration="13798000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1672640701349</created>
@@ -144,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673158679790</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update jacksonObjectMapper">
+      <created>1673162548229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673162548229</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,22 +179,6 @@
     <MESSAGE value="update employee editing" />
     <MESSAGE value="update jacksonObjectMapper" />
     <option name="LAST_COMMIT_MESSAGE" value="update jacksonObjectMapper" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/GlobalExceptionHandler.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

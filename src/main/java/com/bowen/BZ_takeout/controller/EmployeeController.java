@@ -62,13 +62,13 @@ public class EmployeeController {
 
         employee.setPassword(DigestUtils.md5DigestAsHex("12345".getBytes()));
 
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-
-        Long empId = (Long) request.getSession().getAttribute("employee");
-
-        employee.setCreateUser(empId);
-        employee.setUpdateUser(empId);
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
+//
+//        Long empId = (Long) request.getSession().getAttribute("employee");
+//
+//        employee.setCreateUser(empId);
+//        employee.setUpdateUser(empId);
 
         employeeService.save(employee);
 
@@ -94,9 +94,9 @@ public class EmployeeController {
     public R<String> update (HttpServletRequest request, @RequestBody Employee employee) {
         log.info(employee.toString());
 
-        Long empId = (Long) request.getSession().getAttribute("employee");
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setUpdateUser(empId);
+//        Long empId = (Long) request.getSession().getAttribute("employee");
+//        employee.setUpdateTime(LocalDateTime.now());
+//        employee.setUpdateUser(empId);
         employeeService.updateById(employee);
 
         return R.success("successfully edited employee information.");
