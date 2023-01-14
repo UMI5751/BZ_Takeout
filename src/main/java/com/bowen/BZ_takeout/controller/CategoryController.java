@@ -21,7 +21,7 @@ public class CategoryController {
         return R.success("Added Category Successfully");
     }
 
-    @GetMapping
+    @GetMapping("/page")
     public R<Page> page(int page, int pageSize) {
         Page<Category> pageInfo = new Page<>(page, pageSize);
         LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();

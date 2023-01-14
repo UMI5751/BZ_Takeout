@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d037b06e-82f6-4a5d-86e3-c4ecf419a190" name="Changes" comment="update jacksonObjectMapper">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/BaseContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/mapper/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/service/impl/CategoryServiceImpl.java" afterDir="false" />
+    <list default="true" id="d037b06e-82f6-4a5d-86e3-c4ecf419a190" name="Changes" comment="update category part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/common/MyMetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bowen/BZ_takeout/entity/Category.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +97,7 @@
       <workItem from="1672659330533" duration="6270000" />
       <workItem from="1672877910074" duration="331000" />
       <workItem from="1672878353659" duration="27482000" />
-      <workItem from="1673507248763" duration="13798000" />
+      <workItem from="1673507248763" duration="15725000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <created>1672640701349</created>
@@ -155,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673162548229</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update category part">
+      <created>1673667238359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673667238359</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +178,8 @@
     <MESSAGE value="update employee adding" />
     <MESSAGE value="update employee editing" />
     <MESSAGE value="update jacksonObjectMapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="update jacksonObjectMapper" />
+    <MESSAGE value="update category part" />
+    <option name="LAST_COMMIT_MESSAGE" value="update category part" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

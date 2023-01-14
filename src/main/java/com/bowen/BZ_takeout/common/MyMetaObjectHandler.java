@@ -2,10 +2,14 @@ package com.bowen.BZ_takeout.common;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.fasterxml.jackson.databind.ser.Serializers;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+@Component
+@Slf4j
 public class MyMetaObjectHandler implements MetaObjectHandler {
 
     //when inserting, the following key will be automatically filled
