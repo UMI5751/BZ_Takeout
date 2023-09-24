@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 
 @Slf4j
+//@RestController=@controller+@responsebody，会将返回的内容，设置为json格式
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -24,9 +25,12 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    //HttpServletRequest request: 这是一个来自Java Servlet API的对象，它代表HTTP请求。在Spring控制器方法中，它可以用来获取关于当前请求的详细信息，例如查询参数、头信息等。
+    //@RequestBody Employee employee: 这里，@RequestBody 是一个Spring注解，表示请求的主体部分应该被转换（或反序列化）为 Employee 类型的对象。通常，这意味着客户端发送了一个JSON或XML格式的请求体，并且Spring将尝试将其转换为一个 Employee 对象。
     @PostMapping("/login")
     public R<Employee> login(HttpServletRequest request, @RequestBody Employee employee) {
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
+        //在使用 Mybatis-plus 时，通常，当你使用 Employee::getUserage 这样的方法引用，Mybatis-plus 会基于命名约定解析它为对应的数据库字段。如果你的方法名是 getUserage，则默认情况下，它可能会将其解析为 userage 这样的数据库字段。但这种行为也取决于你的配置和可能存在的其他映射策略。
         queryWrapper.eq(Employee::getUsername, employee.getUsername());
         Employee emp = employeeService.getOne(queryWrapper);
 
@@ -46,6 +50,7 @@ public class EmployeeController {
             return R.error("Login Failed");
         }
 
+        //在session中设置employee
         request.getSession().setAttribute("employee", emp.getId());
         return R.success(emp);
     }
@@ -57,6 +62,7 @@ public class EmployeeController {
     }
 
     @PostMapping
+    //在Spring框架的@PostMapping注解中，如果你不提供具体的地址（也称为路径或URL模式），那么这个方法的映射地址将默认为它所在的控制器（Controller）类上的@RequestMapping注解中定义的地址。
     public R<String> save(@RequestBody Employee employee, HttpServletRequest request) {
         log.info("add new employee");
 
@@ -101,7 +107,6 @@ public class EmployeeController {
 
         return R.success("successfully edited employee information.");
     }
-
 
     @GetMapping("/{id}")
     public R<Employee> getById(@PathVariable Long id) {

@@ -6,6 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+//DO (Data Object, for mapping to MySQL, for data exchange between persistence layer and database)
 @Data
 public class Employee implements Serializable {
 
